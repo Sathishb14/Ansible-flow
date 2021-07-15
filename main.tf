@@ -16,7 +16,7 @@ provider "azurerm" {
 data "azurerm_client_config" "current1" {}
  
 #Create Resource Group
-resource "azurerm_resource_group" "tamops" {
+resource "azurerm_resource_group" "uiop" {
   name     = "uiop"
   location = "eastus"
 }
