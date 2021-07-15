@@ -25,5 +25,5 @@ resource "azurerm_virtual_network" "uiop1" {
   name                = "uiop1-vnet"
   address_space       = ["192.168.2.1/16"]
   location            = "centralindia"
-  resource_group_name = azurerm_resource_group.uiop1.name
+  resource_group_name = azurerm_resource_group.uiop1-vnet.name
 }
