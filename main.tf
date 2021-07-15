@@ -1,8 +1,8 @@
 terraform {
   backend "azurerm" {
-    resource_group_name  = "git-rg1"
-    storage_account_name = "gitsathish1"
-    container_name       = "gitcontainer1"
+    resource_group_name  = "git-rg"
+    storage_account_name = "gitsathish"
+    container_name       = "gitcontainer"
     key                  = "terraformgit1.tfstate"
   }
 }
@@ -18,12 +18,12 @@ data "azurerm_client_config" "current1" {}
 #Create Resource Group
 resource "azurerm_resource_group" "uiop" {
   name     = "uiop"
-  location = "eastus"
+  location = "centralindia"
 }
 #Create Virtual Network
-resource "azurerm_virtual_network" "vnet1" {
-  name                = "tamops-vnet"
+resource "azurerm_virtual_network" "uiop1" {
+  name                = "uiop1-vnet"
   address_space       = ["192.168.2.1/16"]
-  location            = "eastus"
+  location            = "centralindia"
   resource_group_name = azurerm_resource_group.tamops.name
 }
