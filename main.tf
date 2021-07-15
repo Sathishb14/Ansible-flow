@@ -16,14 +16,14 @@ provider "azurerm" {
 data "azurerm_client_config" "current1" {}
  
 #Create Resource Group
-resource "azurerm_resource_group" "uiop" {
-  name     = "uiop"
-  location = "centralindia"
+resource "azurerm_resource_group" "uiop23" {
+  name     = "uiop23"
+  location = "eastus"
 }
 #Create Virtual Network
 resource "azurerm_virtual_network" "uiop1-vnet" {
   name                = "uiop1-vnet"
-  address_space       = ["192.168.2.1/16"]
-  location            = "centralindia"
-  resource_group_name = azurerm_resource_group.uiop.name
+  address_space       = ["192.168.0.1/16"]
+  location            = "eastus"
+  resource_group_name = azurerm_resource_group.uiop23.name
 }
