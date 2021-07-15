@@ -1,8 +1,8 @@
 terraform {
   backend "azurerm" {
-    resource_group_name  = "git-rg"
-    storage_account_name = "gitsathish"
-    container_name       = "gitcontainer"
+    resource_group_name  = "git-rg1"
+    storage_account_name = "gitsathish1"
+    container_name       = "gitcontainer1"
     key                  = "terraformgit1.tfstate"
   }
 }
